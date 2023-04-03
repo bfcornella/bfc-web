@@ -31,8 +31,15 @@ h1 {
 }
 
 .uk-navbar-container {
-  background: #EF4444 !important;
   font-family: Staatliches;
+}
+
+.uk-background-primary {
+  background: #b32a2a !important;
+}
+
+.uk-background-cover {
+  background:  #e9caca !important;
 }
 
 img:hover {

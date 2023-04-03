@@ -10,12 +10,17 @@ const Home = ({ articles, categories, homepage }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={homepage.attributes.defaultSeo} />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
+      <div className="uk-background-cover">
+        <div className="uk-section">
+          <div className="uk-container uk-container-large">
 
-          <Articles articles={articles} />
+            <Articles articles={articles} />
+          </div>
         </div>
       </div>
+      <footer className="uk-position-bottom uk-text-center uk-background-primary">
+          <div className="uk-background-primary">Footer is at the bottom</div>
+      </footer>
     </Layout>
   );
 };
