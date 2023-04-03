@@ -4,7 +4,8 @@ services:
   backend:
     container_name: bfc-backend
     build:
-      context: .
+      context: ./backend
+      dockerfile: Dockerfile.test
     depends_on:
       - db
     environment:

@@ -1,12 +1,12 @@
 FROM naskio/strapi
 
-COPY ./backend/package.json ./
-COPY ./backend/yarn.lock ./
+COPY ./package.json ./
+COPY ./yarn.lock ./
 
 RUN yarn install
 
-COPY ./backend .
-COPY ./backend/.env.prod ./.env
+COPY ./ .
+COPY ./.env.test ./.env
 
 ENV NODE_ENV production
 
