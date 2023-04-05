@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     loader: "default",
-    domains: ["localhost", "bfc-backend.fly.dev"],
+    domains: ["localhost", "bfc-backend.fly.dev", "res.cloudinary.com"],
   }
 }
 

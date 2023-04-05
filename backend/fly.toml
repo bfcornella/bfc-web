@@ -1,9 +1,15 @@
-# fly.toml file generated for bfc-backend on 2023-04-02T23:43:21+02:00
+# fly.toml file generated for bfc-backend on 2023-04-05T01:35:07+02:00
 
 app = "bfc-backend"
 kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "mad"
+
+[build]
+  dockerfile = "Dockerfile.prod"
+
+[deploy]
+  strategy = "rolling"
 
 [[services]]
   protocol = "tcp"
@@ -24,7 +30,7 @@ primary_region = "mad"
     soft_limit = 20
 
   [[services.tcp_checks]]
-    interval = "15s"
-    timeout = "2s"
-    grace_period = "5s"
-    restart_limit = 0
+    interval = "1m0s"
+    timeout = "10s"
+    grace_period = "1m0s"
+    restart_limit = 10
