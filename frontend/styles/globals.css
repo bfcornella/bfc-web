@@ -105,3 +105,6 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.uk-navbar-toggle-animate svg>[class*="line-"]{transition:0.2s ease-in-out;transition-property:transform, opacity;transform-origin:center;opacity:1}.uk-navbar-toggle svg>.line-3{opacity:0}.uk-navbar-toggle-animate[aria-expanded="true"] svg>.line-3{opacity:1}.uk-navbar-toggle-animate[aria-expanded="true"] svg>.line-2{transform:rotate(45deg)}.uk-navbar-toggle-animate[aria-expanded="true"] svg>.line-3{transform:rotate(-45deg)}.uk-navbar-toggle-animate[aria-expanded="true"] svg>.line-1,.uk-navbar-toggle-animate[aria-expanded="true"] svg>.line-4{opacity:0}.uk-navbar-toggle-animate[aria-expanded="true"] svg>.line-1{transform:translateY(6px) scaleX(0)}.uk-navbar-toggle-animate[aria-expanded="true"] svg>.line-4{transform:translateY(-6px) scaleX(0)}

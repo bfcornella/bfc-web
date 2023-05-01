@@ -4,7 +4,7 @@ a {
 
 h1 {
   font-family: Staatliches;
-  font-size: 120px;
+  font-size: 70px;
 }
 
 #category {
@@ -31,18 +31,88 @@ h1 {
 }
 
 .uk-navbar-container {
+  height: 160px;
+  position: fixed; 
+  width: 100%;
+  z-index:1;
+}
+
+.uk-navbar-container {
   font-family: Staatliches;
 }
 
 .uk-background-primary {
-  background: #b32a2a !important;
+  background:  #d62933 !important;
 }
 
 .uk-background-cover {
-  background:  #e9caca !important;
+  
+  background-image: url(/images/Portada.jpg);
+}
+.uk-navbar-center {
+  margin-top: 60px;
+}
+.uk-navbar-right{
+  margin-top: 90px;
+}
+.uk-navbar-nav>li>a {
+  color: white !important;
+  font-size: 15px;
+  font-family: 'Arial',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 600;
+  text-transform: none !important;
+  
 }
 
 img:hover {
   opacity: 1;
   transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+footer {
+  font-size: 15px;
+  color: #eee;
+  text-align: center;
+  /*position: fixed;*/
+  padding: 3px 0 5px;
+  /*display: block;*/
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+
+.estilo-logo{
+  z-index: 2;
+  padding: 10px;
+}
+.logo{
+  border-radius: 30px;
+}
+.estilo-nombre-club{
+  height: 100px;
+  background-color: transparent;
+  color: #919191 !important;
+  z-index: 3;
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+}
+
+.uk-article {
+  color: white;
+}
+
+.uk-container.uk-container-large{
+  margin-top: 120px;
+}
+.uk-article-title{
+  color: white;
+}
+.uk-text-lead{
+  color: white;
+}
+.uk-slider.uk-slider-container{
+  background-color: rgba(245, 239, 239, 0.5);
+  color: #fff;
+  padding: 10px;
 }

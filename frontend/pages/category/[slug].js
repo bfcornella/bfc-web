@@ -5,6 +5,8 @@ import Articles from "../../components/articles";
 import { fetchAPI } from "../../lib/api";
 
 const Category = ({ category, categories }) => {
+  console.log('paso por aqui')
+  console.log(categories)
   const seo = {
     metaTitle: category.attributes.name,
     metaDescription: `All ${category.attributes.name} articles`,
@@ -25,7 +27,7 @@ const Category = ({ category, categories }) => {
 
 export async function getStaticPaths() {
   const categoriesRes = await fetchAPI("/categories", { fields: ["slug"] });
-
+console.log(categoriesRes)
   return {
     paths: categoriesRes.data.map((category) => ({
       params: {
@@ -37,6 +39,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  
   const matchingCategories = await fetchAPI("/categories", {
     filters: { slug: params.slug },
     populate: {

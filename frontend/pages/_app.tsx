@@ -4,6 +4,8 @@ import "../assets/css/style.css";
 import { createContext } from "react";
 import { fetchAPI } from "../lib/api";
 import { getStrapiMedia } from "../lib/media";
+//import 'uikit/dist/css/uikit.min.css';
+
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
@@ -45,6 +47,7 @@ MyApp.getInitialProps = async (ctx) => {
       },
     },
   });
+ 
   // Pass the data to our page via props
   return { ...appProps, pageProps: { global: globalRes.data } };
 };

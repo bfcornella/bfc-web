@@ -4,8 +4,7 @@ import Image from "./image";
 
 const Card = ({ article }) => {
   return (
-    <Link legacyBehavior href={`/article/${article.attributes.slug}`}>
-      <a className="uk-link-reset">
+    <Link className="uk-link-reset" href={`/article/${article.attributes.slug}`}>
         <div className="uk-card uk-card-muted">
           <div className="uk-card-media-top">
             <Image image={article.attributes.cover} />
@@ -19,7 +18,6 @@ const Card = ({ article }) => {
             </div>
           </div>
         </div>
-      </a>
     </Link>
   );
 };

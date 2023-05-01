@@ -1,12 +1,12 @@
 {
   "global": {
-    "siteName": "Strapi Blog",
+    "siteName": "Basquet femení Cornellà",
     "defaultSeo": {
       "metaTitle": "Page",
-      "metaDescription": "A blog made with Strapi",
+      "metaDescription": "Basquet femení Cornellà",
       "shareImage": null
     },
-    "siteDescription": "A Blog made with Strapi",
+    "siteDescription": "Basquet femení Cornellà",
     "favicon": null
   },
   "about": {

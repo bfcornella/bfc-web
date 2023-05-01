@@ -57,10 +57,29 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
 
 
+###
 
+Set environment variables on .env file.
 
+yarn install
+yarn build
+yarn develop
+
+curl -L https://fly.io/install.sh | sh
+
+nano /home/codespace/.bashrc
+...
+export FLYCTL_INSTALL="/home/codespace/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+source /home/codespace/.bashrc
+
+flyctl auth login
+
+fly apps list
 fly launch --dockerfile Dockerfile.prod
 fly scale memory 512
+fly deploy
 
 fly apps destroy bfc-backend
 
