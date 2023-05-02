@@ -16,7 +16,7 @@ const Articles = ({ articles }) => {
 	
 			{articles.map((article, i) => {
               return (
-                <li>
+                <li key={article.name}>
                   <div class="uk-panel">
                       <NextImage
                               priority

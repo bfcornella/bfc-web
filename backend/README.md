@@ -76,11 +76,11 @@ source /home/codespace/.bashrc
 
 flyctl auth login
 
-fly apps list
-fly launch --dockerfile Dockerfile.prod
-fly scale memory 512
-fly deploy
+flyctl apps list
+flyctl launch --dockerfile Dockerfile.prod
+flyctl scale memory 512
+flyctl deploy
 
-fly apps destroy bfc-backend
+flyctl apps destroy bfc-backend
 
-fly proxy 15432:5432 -a bfc
+flyctl proxy 15432:5432 -a bfc
