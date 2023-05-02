@@ -34,9 +34,9 @@ const Nav = ({ categories }) => {
          
         </div>
         
-        <div className="uk-navbar-right">
-            <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav">
-            <svg class="uk-navbar-toggle-animate" fill="white" width="20" height="20" viewBox="0 0 20 20"><rect class="line-1" y="3" width="20" height="2"></rect><rect class="line-2" y="9" width="20" height="2"></rect><rect class="line-3" y="9" width="20" height="2"></rect><rect class="line-4" y="15" width="20" height="2"></rect></svg>
+        <div className="uk-navbar-right uk-padding-small">
+            <a href="#" className="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav">
+            <svg className="uk-navbar-toggle-animate" fill="white" width="20" height="20" viewBox="0 0 20 20"><rect className="line-1" y="3" width="20" height="2"></rect><rect className="line-2" y="9" width="20" height="2"></rect><rect className="line-3" y="9" width="20" height="2"></rect><rect className="line-4" y="15" width="20" height="2"></rect></svg>
           </a>
         </div>
        

@@ -67,6 +67,9 @@ const Article = ({ article, categories }) => {
           </div>
         </div>
       </div>
+      <footer className="uk-text-center uk-background-primary">
+          <div className="uk-background-primary">Bàsquet Femení Cornellà © 2023</div>
+      </footer>
     </Layout>
   );
 };
