@@ -17,7 +17,7 @@ const HomePageInfo = ({ homePageInfo }) => {
           </div>
           <div className="uk-text-lead uk-text-italic uk-text-nowrap">{homePageInfo.attributes.description}</div>
         </div>
-            <div className="uk-card uk-card-default uk-card-body uk-margin-top uk-visible@s">
+            <div className="uk-card uk-card-default uk-card-body uk-margin-top uk-visible@s" style={{opacity: '0.90'}}>
               <h3 className="uk-card-title">Default</h3>
               <div class="uk-panel uk-height-small">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -26,7 +26,7 @@ const HomePageInfo = ({ homePageInfo }) => {
       </div>
       <div id="article" className="uk-hidden@s">
         <div className="uk-padding-large" />
-        <div className="uk-card uk-card-default uk-card-body uk-margin-top">
+        <div className="uk-card uk-card-default uk-card-body uk-margin-top" style={{opacity: '0.90'}}>
           <h3 className="uk-card-title">Default</h3>
           <div class="uk-panel uk-height-small">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
