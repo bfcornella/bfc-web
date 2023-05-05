@@ -36,15 +36,15 @@ const Nav = ({ categories }) => {
           <div className="uk-position-top-left uk-padding-small uk-padding">
             <Link href={`/`}>
               <Image src="/Logo_w.jpg" className="logo"
-                          width={60}
-                          height={60}
+                          width={64}
+                          height={64}
                           alt="Home"
                         />
             </Link>
           </div>
 
-          <div className="uk-position-top-right uk-padding-small">
-              <a href="#" className="uk-navbar-toggle uk-navbar-toggle-animate uk-position-right uk-padding-large uk-hidden@s" uk-toggle="target: #sidenav">
+          <div className="uk-position-top-right">
+              <a href="#" className="uk-navbar-toggle uk-navbar-toggle-animate uk-position-right uk-padding uk-margin-top uk-hidden@s" uk-toggle="target: #sidenav">
               <svg className="uk-navbar-toggle-animate" fill="white" width="30" height="30" viewBox="0 0 20 20"><rect className="line-1" y="3" width="20" height="2"></rect><rect className="line-2" y="9" width="20" height="2"></rect><rect className="line-3" y="9" width="20" height="2"></rect><rect className="line-4" y="15" width="20" height="2"></rect></svg>
             </a>
           </div>
