@@ -35,11 +35,21 @@ h1 {
   position: fixed; 
   width: 100%;
   z-index:1;
-}
-
-.uk-navbar-container {
   font-family: Staatliches;
 }
+
+.uk-navbar-container-tight {
+  height: 90px;
+  position: fixed; 
+  width: 100%;
+  z-index:1;
+  font-family: Staatliches;
+}
+
+.uk-navbar-toggle {
+  min-height: 60px;
+}
+
 
 .uk-background-primary {
   background:  #d62933 !important;
