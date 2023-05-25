@@ -40,8 +40,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## GitHub Codespaces
 
 yarn install
-export NEXT_PUBLIC_STRAPI_API_URL=http://127.0.0.1:1337
 yarn dev
+
+#Production build
+export NEXT_PUBLIC_STRAPI_API_URL=http://127.0.0.1:1337
+yarn build
 
 npm install --global vercel@latest
 vercel login
