@@ -40,6 +40,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## GitHub Codespaces
 
 yarn install
+Linux: export NEXT_PUBLIC_STRAPI_API_URL=http://127.0.0.1:1337
+Windows (PowerShell): $Env:NEXT_PUBLIC_STRAPI_API_URL = "http://127.0.0.1:1337"
 yarn dev
 
 #Production build
