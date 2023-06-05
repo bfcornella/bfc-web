@@ -7,37 +7,39 @@ const FooterApp = () => {
     <footer className="uk-background-primary">
       <div className="uk-container uk-background-light-primary uk-width-1-1">
       <div uk-grid className="uk-grid-small uk-child-width-expand@s uk-text-small">
-          <div className="uk-width-1-3@m uk-align-left"> 
-            <Image src="/AF_Tram_NegColor.jpg"
-                        width={100}
-                        height={100}
-                        alt="Home"
-                      />
-               <Image src="/ajcornella_color_cen.png"
-                        width={180}
-                        height={180}
-                        alt="Home"
-                      />
-                      <Image src="/logo_esports_cornella_sense_fons.png"
-                        width={150}
-                        height={150}
-                        alt="Home"
-                      />
-                      <Image src="/logo_clinica_dental_eucaliptus.png"
-                        width={150}
-                        height={150}
-                        alt="Home"
-                      />
-                      <Image src="/logo-montserrat.svg"
-                        width={150}
-                        height={150}
-                        alt="Home"
-                      />
-                        <Image src="/megagame.png"
-                        width={150}
-                        height={150}
-                        alt="Home"
-                      /> 
+          <div className="uk-width-1-3@m uk-align-left uk-margin-remove"> 
+              <div uk-grid className="uk-grid-small uk-align-center">
+                  <Image src="/AF_Tram_NegColor.jpg"
+                    width={100}
+                    height={100}
+                    alt="Home"
+                  />
+                  <Image src="/ajcornella_color_negatiu_cen.png"
+                    width={180}
+                    height={180}
+                    alt="Home"
+                  />
+                  <Image src="/logo_esports_cornella_sense_fons.png"
+                    width={150}
+                    height={150}
+                    alt="Home"
+                  />
+                  <Image src="/logo_clinica_dental_eucaliptus.png"
+                    width={120}
+                    height={120}
+                    alt="Home"
+                  />
+                  <Image src="/logo-montserrat.svg"
+                    width={150}
+                    height={150}
+                    alt="Home"
+                  />
+                    <Image src="/megagame.png"
+                    width={150}
+                    height={150}
+                    alt="Home"
+                  /> 
+              </div>
           </div>
           <div className="uk-width-1-3@m uk-align-right">
             <b>Telèfon</b><br/>
