@@ -6,6 +6,7 @@ import Layout from "../../components/layout";
 
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media";
+import FooterApp from "../../components/footerApp";
 
 const Article = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.attributes.cover);
@@ -67,9 +68,7 @@ const Article = ({ article, categories }) => {
           </div>
         </div>
       </div>
-      <footer className="uk-text-center uk-background-primary">
-          <div className="uk-background-primary">Bàsquet Femení Cornellà © 2023</div>
-      </footer>
+      <FooterApp/>
     </Layout>
   );
 };

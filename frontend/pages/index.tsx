@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
 import HomePageInfo from "../components/homePageInfo";
+import FooterApp from "../components/footerApp";
 //import UIkit from 'uikit';
 //import Icons from 'uikit/dist/js/uikit-icons';
 
@@ -24,9 +25,7 @@ console.log(homePageInfo);
           </div>
         </div>
       </div>
-      <footer className="uk-text-center uk-background-primary">
-          <div className="uk-background-primary">Bàsquet Femení Cornellà © 2023</div>
-      </footer>
+      <FooterApp/>
     </Layout>
   );
 };
