@@ -52,7 +52,11 @@ h1 {
 
 
 .uk-background-primary {
-  background:  #d62933 !important;
+  background:  #A42A04 !important;
+}
+
+.uk-background-light-primary {
+  background:  #b42e04 !important;
 }
 
 .uk-background-cover {
@@ -125,4 +129,10 @@ footer {
   background-color: rgba(245, 239, 239, 0.5);
   color: #fff;
   padding: 10px;
+}
+
+.uk-link, a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }
