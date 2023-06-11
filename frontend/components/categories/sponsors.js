@@ -15,7 +15,7 @@ const Sponsors = ({ articles }) => {
 <div>
     {articles.map((article, i) => {
               return (
-                <div class="uk-card uk-card-default uk-card-body uk-width-1@m">
+                <div key={article.name} class="uk-card uk-card-default uk-card-body uk-width-1@m">
                     <div class="uk-column-1-2">
                         <div class="uk-card-media-left uk-cover-container">
                           <img src={getStrapiMedia(article.attributes.cover)}  width="300" height="200"/>
