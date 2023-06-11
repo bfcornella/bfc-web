@@ -1,33 +1,48 @@
 import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 import Articles from "../../components/articles";
+import Sponsors from "../../components/categories/sponsors";
 
 import { fetchAPI } from "../../lib/api";
 
 const Category = ({ category, categories }) => {
-  console.log('paso por aqui')
-  console.log(categories)
+
   const seo = {
     metaTitle: category.attributes.name,
     metaDescription: `All ${category.attributes.name} articles`,
   };
-
-  return (
-    <Layout categories={categories.data}>
-      <Seo seo={seo} />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h1>{category.attributes.name}</h1>
-          <Articles articles={category.attributes.articles.data} />
+  
+  switch (category.attributes.slug) {
+    case "sponsors":
+     return (
+        <Layout categories={categories.data}>
+        <Seo seo={seo} />
+        <div className="uk-section">
+          <div className="uk-container uk-container-large">
+            <Sponsors articles={category.attributes.articles.data} />
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+      );
+    default:
+      return (
+        <Layout categories={categories.data}>
+          <Seo seo={seo} />
+          <div className="uk-section">
+            <div className="uk-container uk-container-large">
+              <h1>{category.attributes.name}</h1>
+              <Articles articles={category.attributes.articles.data} />
+            </div>
+          </div>
+        </Layout>
   );
+  }
+
+  
 };
 
 export async function getStaticPaths() {
   const categoriesRes = await fetchAPI("/categories", { fields: ["slug"] });
-console.log(categoriesRes)
   return {
     paths: categoriesRes.data.map((category) => ({
       params: {

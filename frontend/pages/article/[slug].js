@@ -6,7 +6,6 @@ import Layout from "../../components/layout";
 
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media";
-import FooterApp from "../../components/footerApp";
 
 const Article = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.attributes.cover);
@@ -68,7 +67,6 @@ const Article = ({ article, categories }) => {
           </div>
         </div>
       </div>
-      <FooterApp/>
     </Layout>
   );
 };

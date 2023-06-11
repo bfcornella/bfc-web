@@ -21,7 +21,7 @@ const Nav = ({ categories }) => {
               {categories.map((category) => {
                 return (
                   <li key={category.id} >
-                    <Link className="uk-link-reset" href={`/category/${category.attributes.slug}`}>
+                    <Link className="uk-link-reset" href={category.attributes.slug == 'home'? `/`:`/category/${category.attributes.slug}`}>
                       {category.attributes.name}
                     </Link>
                   </li>

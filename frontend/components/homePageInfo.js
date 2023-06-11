@@ -3,7 +3,6 @@ import Articles from "../components/articles";
 
 
 const HomePageInfo = ({ homePageInfo }) => {
-  console.log(homePageInfo);
   
   return (
     <div className="uk-container">
