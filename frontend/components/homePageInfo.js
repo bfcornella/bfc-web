@@ -10,7 +10,7 @@ const HomePageInfo = ({ homePageInfo }) => {
         <div>
           <div className="uk-text-large uk-text-bolder uk-text-nowrap uk-margin-top">
             <h1>
-              <span style={{color: '#d62933'}}>BF </span>
+              <span style={{color: '#A42A04'}}>BF </span>
               <span style={{color: 'white'}}>CORNELLÀ </span>
             </h1>
           </div>
