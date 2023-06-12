@@ -1,23 +1,16 @@
 
 import React from "react";
-import Articles from "../components/articles";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
 import HomePageInfo from "../components/homePageInfo";
-import FooterApp from "../components/footerApp";
-//import UIkit from 'uikit';
-//import Icons from 'uikit/dist/js/uikit-icons';
+
 
  // @ts-ignore
-const Home = ({ articles, categories, homepage, homePageInfo }) => {
-  // loads the Icon plugin
-//UIkit.use(Icons);
-console.log(homePageInfo);
-
+const Home = ({ articles, categories, homePage, homePageInfo }) => {
   return (
     <Layout categories={categories}>
-      <Seo seo={homepage.attributes.defaultSeo} />
+      <Seo seo={homePage.attributes.defaultSeo} />
       <div className="uk-background-cover">
         <div className="uk-section">
           <div className="uk-container uk-container-large">
@@ -39,10 +32,9 @@ export async function getStaticProps() {
       },
     },
   });
-  const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
+  const [articlesRes, categoriesRes, global] = await Promise.all([
     fetchAPI("/articles", { populate: ["cover", "category"] }),
     fetchAPI("/categories", { populate: "*" }),
-   // fetchAPI("/home-page", { populate: "*" }),
     fetchAPI("/global", {
       populate: "*"/*{
         defaultSeo: { populate: "*" },
@@ -54,8 +46,7 @@ export async function getStaticProps() {
     props: {
       articles: articlesRes.data,
       categories: categoriesRes.data,
-     //homePageInfo: homePageInfo.data,
-      homepage: homepageRes.data,
+      homePage: global.data,
       homePageInfo: categoryIni
     },
     revalidate: 1,

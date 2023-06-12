@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const SideNav = ({ categories }) => {
   return (
-<div id="sidenav" uk-navbar-toggle-icon uk-offcanvas="flip: true" className="uk-offcanvas">
+<div id="sidenav" navbar-toggle-icon="true" uk-offcanvas="flip: true" className="uk-offcanvas">
     <div className="uk-offcanvas-bar">
         <ul className="uk-nav">
         {categories.map((category) => {

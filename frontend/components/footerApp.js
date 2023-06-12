@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const FooterApp = () => {
+const FooterApp = ({ global }) => {
   return (
     <footer className="uk-background-primary">
       <div className="uk-container uk-background-light-primary uk-width-1-1">
@@ -43,10 +43,10 @@ const FooterApp = () => {
           </div>
           <div className="uk-width-1-3@m uk-align-right">
             <b>Telèfon</b><br/>
-            <a href="tel:934711207">934711207</a> / <a href="tel:654385344">654385344</a><br/><br/>
+            <span dangerouslySetInnerHTML={{__html:global.attributes.phone_1}}></span> / <span dangerouslySetInnerHTML={{__html:global.attributes.phone_2}}></span><br/><br/>
             <b>Email</b><br/>
-            <a href="mailto:federacio@basquetfemenicornella.com">federacio@basquetfemenicornella.com</a><br/><br/>
-            <Link href={`https://www.instagram.com/bfcornella/`} target="_blank" alt="Instagram">
+            <a href={"mailto:"+global.attributes.mail}>{global.attributes.mail}</a><br/><br/>
+            <Link href={global.attributes.instagram} target="_blank" alt="Instagram">
             <Image src="/instagram.png"
                           width={32}
                           height={32}
@@ -56,15 +56,13 @@ const FooterApp = () => {
            
           </div>
           <div className="uk-width-1-3@m uk-align-center">
-          <Link href={`https://goo.gl/maps/bHpdg8CZT2wcsCb26`} target="_blank"><b>Localització</b></Link>
+          <Link href={global.attributes.google_location} target="_blank"><b>Localització</b></Link>
             <br></br>
-            Carrer de Marià Benlliure S/N<br></br>(Poliesportiu Can Carbonell)<br/>
-            08940 Cornellà de Llobregat, Barcelona
+            <span dangerouslySetInnerHTML={{__html:global.attributes.address}}></span>
             <br/><br/>
             <b>Horari secretaria</b>
             <br/>
-            Dilluns, Dimecres i Divendres
-            18:00h a 20:00h
+            <span dangerouslySetInnerHTML={{__html:global.attributes.hours}}></span>
           </div>
         
       </div>

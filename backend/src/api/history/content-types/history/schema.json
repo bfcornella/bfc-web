@@ -4,7 +4,8 @@
   "info": {
     "singularName": "history",
     "pluralName": "histories",
-    "displayName": "History"
+    "displayName": "History",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,11 @@
   "attributes": {
     "description": {
       "type": "richtext"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
     }
   }
 }

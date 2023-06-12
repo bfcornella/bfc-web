@@ -34,6 +34,27 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "hours": {
+      "type": "string"
+    },
+    "phone_1": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phone_2": {
+      "type": "string"
+    },
+    "google_location": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
     }
   }
 }

@@ -18,7 +18,7 @@ const HomePageInfo = ({ homePageInfo }) => {
         </div>
             <div className="uk-card uk-card-default uk-card-body uk-margin-top uk-visible@s" style={{opacity: '0.90'}}>
               <h3 className="uk-card-title">Default</h3>
-              <div class="uk-panel uk-height-small">
+              <div className="uk-panel uk-height-small">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </div>
             </div>
