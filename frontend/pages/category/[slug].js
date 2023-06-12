@@ -8,8 +8,7 @@ import Contact from "../../components/categories/Contact";
 import { fetchAPI } from "../../lib/api";
 
 const Category = ({ category, categories, history }) => {
-  console.log(categories);
-  console.log(category)
+
   const seo = {
     metaTitle: category.attributes.name,
     metaDescription: `All ${category.attributes.name} articles`,
@@ -32,8 +31,8 @@ const Category = ({ category, categories, history }) => {
           <Layout categories={categories.data}>
           <Seo seo={seo} />
           <div className="uk-section">
-            <div className="uk-container uk-container-large">
-              <KnowUs articles={category.attributes.articles.data} history={history.data.attributes}/>
+            <div className="uk-container uk-container-large uk-background-muted ">
+              <KnowUs articles={category.attributes.articles.data} history={history.data.attributes} category={category}/>
             </div>
           </div>
         </Layout>
@@ -43,10 +42,11 @@ const Category = ({ category, categories, history }) => {
               <Layout categories={categories.data}>
               <Seo seo={seo} />
               <div className="uk-section">
-                <div className="uk-container uk-container-large">
+              <div className="uk-container uk-container-large uk-background-muted ">
                   <Contact category={category}/>
-                </div>
               </div>
+          </div>
+             
             </Layout>
             );    
     default:
@@ -84,6 +84,9 @@ export async function getStaticProps({ params }) {
     filters: { slug: params.slug },
     populate: {
       articles: {
+        populate: "*",
+      },
+      image: {
         populate: "*",
       }
     },

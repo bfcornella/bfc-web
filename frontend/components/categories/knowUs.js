@@ -1,14 +1,17 @@
 import React from "react";
 
 /* Dejo los articles por si más adelante se quiere poner debajo de la descripción algún combo de notícias historicas o algo con fotos y demás */
-const KnowUs = ({ articles, history }) => {
+const KnowUs = ({ articles, history , category}) => {
 
   return (
-    <div>
-        <article className="uk-article"  style={{color: '#333'}}>
-          <h1 ca="uk-article-title"><a className="uk-link-reset" href="">jalsdjfa</a></h1>
-          <p>{history.description}</p>
+    <div  class="uk-padding uk-panel" >
 
+        <div class="uk-height-small uk-flex uk-flex-middle">
+            <h1><span class="uk-text-muted"> {category.attributes.name}</span></h1>
+        </div>
+        <article className="uk-article"  style={{color: '#808080', fontFamily: 'Lucida Handwriting', fontSize: 16, lineHeight: 2}}>
+         
+          <span dangerouslySetInnerHTML={{__html:history.description}}></span>
         </article>
         
     </div>

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { fetchAPI } from "../../lib/api";
 import Link from "next/link";
+import NextImage from "next/image";
+import { getStrapiMedia } from "../../lib/media";
 
 const Contact = ({ category }) => {
   const [data, setData] = useState(null);
-  console.log(category)
   
   useEffect(() => {
     const asyncAction = async () => {
@@ -25,14 +26,12 @@ const Contact = ({ category }) => {
   return (
     <>
       {data && (
-        <div>
-       <div class="uk-inline">
+        <div  class="uk-padding uk-panel" >
 
-        <img src="images/photo.jpg" width="1800" height="200" alt=""/>
-
-        <div class="uk-position-top uk-overlay uk-overlay-default uk-text-center">Top</div>
-       
+        <div class="uk-height-small uk-flex uk-flex-middle">
+            <h1><span class="uk-text-muted"> {category.attributes.name}</span></h1>
         </div>
+       
         <div class="uk-column-1-3">
           <div class="uk-margin uk-card uk-card-default uk-card-body">
             <div className="uk-margin-right" style={{backgroundColor: '#daa99a', borderRadius: 50, padding: 15, width: 60}}>

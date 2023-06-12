@@ -5,6 +5,7 @@ import NextImage from "next/image";
 import { getStrapiMedia } from "../lib/media";
 
 const Articles = ({ articles }) => {
+
   const leftArticlesCount = Math.ceil(articles.length / 5);
   const leftArticles = articles.slice(0, leftArticlesCount);
   const rightArticles = articles.slice(leftArticlesCount, articles.length);
