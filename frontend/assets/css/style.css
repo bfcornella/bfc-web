@@ -141,3 +141,9 @@ footer {
 .uk-navbar-dropdown {
   top: 65px !important;
 }
+
+.uk-navbar-dropdown-black {
+  top: 65px !important;
+  background: #222;
+  padding: 5px;
+}

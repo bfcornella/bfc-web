@@ -13,12 +13,12 @@ const SideNav = ({ categories }) => {
                     {category.attributes.name}
                   </Link>
                   {category.attributes.subcategories.data.length>0 &&
-                      <div className="uk-navbar-dropdown">
+                      <div className="uk-navbar-dropdown-black">
                           <ul className="uk-nav uk-navbar-dropdown-nav">
                             {category.attributes.subcategories.data.map((subcategory) => {
                               return (
                                 <li key={subcategory.attributes.id}>
-                                  <Link  className="uk-link-reset"  style={{fontSize: 15, fontFamily: 'Arial,Helvetica,Arial,Lucida,sans-serif', fontWeight: 600}} href={category.attributes.slug == 'home'? `/`:`/subcategory/${subcategory.attributes.slug}`}>
+                                  <Link  className="uk-link-reset"  style={{fontSize: 16}} href={category.attributes.slug == 'home'? `/`:`/subcategory/${subcategory.attributes.slug}`}>
                                     {subcategory.attributes.name}
                                   </Link>
                                 </li>
