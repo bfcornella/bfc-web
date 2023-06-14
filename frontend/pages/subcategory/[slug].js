@@ -1,40 +1,40 @@
 import Seo from "../../components/seo";
 import Layout from "../../components/layout";
-import Articles from "../../components/articles";
-import Sponsors from "../../components/categories/sponsors";
+import History from "../../components/subcategory/History";
+import Organization from "../../components/subcategory/Organization";
 import Contact from "../../components/categories/Contact";
 
 import { fetchAPI } from "../../lib/api";
 
-const Category = ({ category, categories, history }) => {
+const subcategory = ({ subcategory, categories, history, organization }) => {
   console.log('categories');
   console.log(categories)
-  console.log('category');
-  console.log(category)
+  console.log('subcategory');
+  console.log(subcategory)
   const seo = {
-    metaTitle: category.attributes.name,
-    metaDescription: `All ${category.attributes.name} articles`,
+    metaTitle: subcategory.attributes.name,
+    metaDescription: `All ${subcategory.attributes.name} articles`,
   };
   
-  switch (category.attributes.slug) {
-    case "sponsors":
-     return (
+  switch (subcategory.attributes.slug) {
+    case "history":
+      return (
         <Layout categories={categories.data}>
         <Seo seo={seo} />
         <div className="uk-section">
-          <div className="uk-container uk-container-large">
-            <Sponsors articles={category.attributes.articles.data} />
+          <div className="uk-container uk-container-large uk-background-muted ">
+            <History history={history.data.attributes} subcategory={subcategory}/>
           </div>
         </div>
       </Layout>
       );
-    case "contact":
+    case "organization":
           return (
               <Layout categories={categories.data}>
               <Seo seo={seo} />
               <div className="uk-section">
               <div className="uk-container uk-container-large uk-background-muted ">
-                  <Contact category={category}/>
+                  <Organization organization={organization} subcategory={subcategory}/>
               </div>
           </div>
              
@@ -46,8 +46,8 @@ const Category = ({ category, categories, history }) => {
           <Seo seo={seo} />
           <div className="uk-section">
             <div className="uk-container uk-container-large">
-              <h1>{category.attributes.name}</h1>
-              <Articles articles={category.attributes.articles.data} />
+              <h1>{subcategory.attributes.name}</h1>
+
             </div>
           </div>
         </Layout>
@@ -58,7 +58,7 @@ const Category = ({ category, categories, history }) => {
 };
 
 export async function getStaticPaths() {
-  const categoriesRes = await fetchAPI("/categories", { fields: ["slug"] });
+  const categoriesRes = await fetchAPI("/subcategories", { fields: ["slug"] });
   return {
     paths: categoriesRes.data.map((category) => ({
       params: {
@@ -71,19 +71,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   
-  const matchingCategories = await fetchAPI("/categories", {
+  const matchingCategories = await fetchAPI("/subcategories", {
     filters: { slug: params.slug },
-    populate: {
-      articles: {
-        populate: "*",
-      },
-      subcategories: {
-        populate: "*",
-      },
-      image: {
-        populate: "*",
-      }
-    },
+    populate: "*"
   });
   const allCategories = await fetchAPI("/categories", {
     populate: {
@@ -93,15 +83,17 @@ export async function getStaticProps({ params }) {
     },
   });
   const history = await fetchAPI("/history");
+  const organization = await fetchAPI("/organization");
   
   return {
     props: {
-      category: matchingCategories.data[0],
+      subcategory: matchingCategories.data[0],
       categories: allCategories,
-      history: history
+      history: history,
+      organization: organization
     },
     revalidate: 1,
   };
 }
 
-export default Category;
+export default subcategory;

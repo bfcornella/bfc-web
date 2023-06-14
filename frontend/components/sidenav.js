@@ -12,7 +12,7 @@ const SideNav = ({ categories }) => {
                   <Link className="uk-link-reset" href={category.attributes.slug == 'home'? `/`:`/category/${category.attributes.slug}`}>
                     {category.attributes.name}
                   </Link>
-                </li>
+                                </li>
               );
             })}
         </ul>
