@@ -17,18 +17,18 @@ const HomePageInfo = ({ homePageInfo }) => {
           <div className="uk-text-lead uk-text-italic uk-text-nowrap">{homePageInfo.attributes.description}</div>
         </div>
             <div className="uk-card uk-card-default uk-card-body uk-margin-top uk-visible@s" style={{opacity: '0.90'}}>
-              <h3 className="uk-card-title">Default</h3>
+              <h3 className="uk-card-title">Títol notícia destacada</h3>
               <div className="uk-panel uk-height-small">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Informació de notícia destacada
               </div>
             </div>
       </div>
       <div id="article" className="uk-hidden@s">
         <div className="uk-padding-large" />
         <div className="uk-card uk-card-default uk-card-body uk-margin-top" style={{opacity: '0.90'}}>
-          <h3 className="uk-card-title">Default</h3>
+          <h3 className="uk-card-title">Títol notícia destacada</h3>
           <div class="uk-panel uk-height-small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Informació de notícia destacada
           </div>
         </div>
       </div>
