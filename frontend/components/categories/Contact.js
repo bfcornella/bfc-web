@@ -43,7 +43,7 @@ const Contact = ({ category }) => {
                 <div className="uk-align-center" style={{backgroundColor: '#daa99a', borderRadius: 50, padding: 15, width: 60}}>
                   <span uk-icon="icon: clock; ratio: 3"></span>
                 </div>
-                <div className="uk-text-center" style={{padding: 15}}>
+                <div class="uk-text-center" style={{padding: 15}}>
                   <span style={{color: '#daa99a'}} ><b>Horari secretaria</b></span>
                   <br/>
                   <span dangerouslySetInnerHTML={{__html:data.attributes.hours}}></span>
@@ -55,7 +55,7 @@ const Contact = ({ category }) => {
                 <div className="uk-align-center" style={{backgroundColor: '#daa99a', borderRadius: 50, padding: 15, width: 60}}>
                 <span uk-icon="icon: receiver; ratio: 3"></span>
                 </div>
-                <div className="uk-text-center" style={{padding: 15}}>
+                <div class="uk-text-center" style={{padding: 15}}>
                   <span style={{color: '#daa99a'}} ><b>Telèfon</b><br/></span>
                   <span dangerouslySetInnerHTML={{__html:data.attributes.phone_1}}></span> / <span dangerouslySetInnerHTML={{__html:data.attributes.phone_2}}></span>
                 </div>
@@ -66,7 +66,7 @@ const Contact = ({ category }) => {
                 <div className="uk-align-center" style={{backgroundColor: '#daa99a', borderRadius: 50, padding: 15, width: 60}}>
                 <span uk-icon="icon: location; ratio: 3"></span>
                 </div>
-                <div className="uk-text-center" style={{padding: 15}}>
+                <div class="uk-text-center" style={{padding: 15}}>
                 <Link href={data.attributes.google_location}  style={{color: '#daa99a'}} target="_blank"><b>Localització</b></Link>
                   <br></br>
                   <span dangerouslySetInnerHTML={{__html:data.attributes.address}}></span>
