@@ -136,3 +136,8 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+.uk-navbar-dropdown {
+  top: 65px !important;
+}

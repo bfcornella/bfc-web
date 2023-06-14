@@ -30,11 +30,19 @@ export async function getStaticProps() {
       articles: {
         populate: "*",
       },
+      subcategories: {
+        populate: "*",
+      },
     },
   });
   const [articlesRes, categoriesRes, global] = await Promise.all([
     fetchAPI("/articles", { populate: ["cover", "category"] }),
-    fetchAPI("/categories", { populate: "*" }),
+    fetchAPI("/categories", { populate: {
+      subcategories: {
+        populate: "*",
+      }
+
+    } }),
     fetchAPI("/global", {
       populate: "*"/*{
         defaultSeo: { populate: "*" },

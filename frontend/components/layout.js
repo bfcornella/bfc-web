@@ -6,7 +6,7 @@ import { fetchAPI } from "../lib/api";
 
 const Layout = ({ children, categories }) => {
   const [data, setData] = useState(null);
-  
+  console.log(categories)
   useEffect(() => {
     const asyncAction = async () => {
       const globalRes = await fetchAPI("/global", {

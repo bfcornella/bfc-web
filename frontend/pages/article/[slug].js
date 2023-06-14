@@ -91,10 +91,16 @@ export async function getStaticProps({ params }) {
     },
     populate: ["cover", "category", "author.picture"],
   });
-  const categoriesRes = await fetchAPI("/categories");
+  const allCategories = await fetchAPI("/categories", {
+    populate: {
+      subcategories: {
+        populate: "*",
+      },
+    },
+  });
 
   return {
-    props: { article: articlesRes.data[0], categories: categoriesRes },
+    props: { article: articlesRes.data[0], categories: allCategories },
     revalidate: 1,
   };
 }

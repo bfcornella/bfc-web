@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Nav = ({ categories }) => {
+  console.log('nav');
+  console.log(categories)
   return (
     <div>    
         <nav className="uk-navbar-container uk-background-primary uk-navbar uk-visible@s">
@@ -14,9 +16,10 @@ const Nav = ({ categories }) => {
                           alt="Home"
                         />
             </Link>
-          </div>       
-
-          <div className="uk-navbar-center">
+          </div>  
+          <div className="uk-navbar-center">     
+          <div uk-navbar="mode: click">
+          
             <ul className="uk-navbar-nav uk-visible@s">
               {categories.map((category) => {
                 return (
@@ -24,11 +27,29 @@ const Nav = ({ categories }) => {
                     <Link className="uk-link-reset" href={category.attributes.slug == 'home'? `/`:`/category/${category.attributes.slug}`}>
                       {category.attributes.name}
                     </Link>
+                    {category.attributes.subcategories.data.length>0 &&
+                      <div className="uk-navbar-dropdown">
+                          <ul className="uk-nav uk-navbar-dropdown-nav">
+                            {category.attributes.subcategories.data.map((subcategory) => {
+                              return (
+                                <li key={subcategory.attributes.id}>
+                                  <Link  className="uk-link-reset"  style={{fontSize: 15, fontFamily: 'Arial,Helvetica,Arial,Lucida,sans-serif', fontWeight: 600}} href={category.attributes.slug == 'home'? `/`:`/subcategory/${subcategory.attributes.slug}`}>
+                                    {subcategory.attributes.name}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                    }
+                    
                   </li>
                 );
               })}
+
             </ul>
-          </div>   
+          </div>  
+          </div> 
       </nav>
       
       <nav className="uk-navbar-container-tight uk-background-primary uk-navbar uk-hidden@s">
