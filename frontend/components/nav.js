@@ -45,7 +45,6 @@ const Nav = ({ categories }) => {
               })}
 
             </ul>
-          </div>  
           </div> 
       </nav>
       
