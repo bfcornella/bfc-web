@@ -5,7 +5,7 @@ const Organization = ({ organization , subcategory}) => {
   console.log('organization')
   console.log(organization)
   return (
-    <div  class="uk-padding uk-panel" >
+    <div class="uk-padding uk-panel" >
 
         <div class="uk-height-small uk-flex uk-flex-middle">
             <h1><span class="uk-text-muted"> {subcategory.attributes.name}</span></h1>
@@ -15,7 +15,7 @@ const Organization = ({ organization , subcategory}) => {
           return (
           
           
-            <div className="uk-width-1-3@m uk-align-left uk-margin-remove"> 
+            <div key={i} className="uk-width-1-3@m uk-align-left uk-margin-remove"> 
               <div class="uk-margin uk-card uk-card-default uk-card-body">
                 <div className="uk-align-center" style={{backgroundColor: '#daa99a', borderRadius: 50, padding: 15, width: 60}}>
                   <span uk-icon="icon: tag; ratio: 3"></span>

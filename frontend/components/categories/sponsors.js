@@ -10,7 +10,7 @@ const Sponsors = ({ category, articles }) => {
         </div>
         {articles.map((article, i) => {
                   return (
-                    <article  class="uk-card uk-card-default uk-card-body uk-width-1@m uk-comment" role="comment"  style={{marginBottom: 25}} >
+                    <article key={article.name} class="uk-card uk-card-default uk-card-body uk-width-1@m uk-comment" role="comment"  style={{marginBottom: 25}} >
                       <div className="uk-container uk-width-1-1">
                         <div uk-grid className="uk-grid-small uk-child-width-expand@s uk-text-small">
                             
