@@ -2,7 +2,7 @@ import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 import History from "../../components/subcategory/History";
 import Organization from "../../components/subcategory/Organization";
-import Contact from "../../components/categories/Contact";
+import { getStrapiMedia } from "../../lib/media";
 
 import { fetchAPI } from "../../lib/api";
 
@@ -19,6 +19,7 @@ const subcategory = ({ subcategory, categories, history, organization }) => {
   switch (subcategory.attributes.slug) {
     case "history":
       return (
+        <div style={{backgroundImage: `url(${getStrapiMedia(subcategory.attributes.image)})`}}>
         <Layout categories={categories.data}>
         <Seo seo={seo} />
         <div className="uk-section">
@@ -27,18 +28,21 @@ const subcategory = ({ subcategory, categories, history, organization }) => {
           </div>
         </div>
       </Layout>
+      </div>
       );
     case "organization":
           return (
+            <div style={{backgroundImage: `url(${getStrapiMedia(subcategory.attributes.image)})`}}>
               <Layout categories={categories.data}>
               <Seo seo={seo} />
-              <div className="uk-section">
-              <div className="uk-container uk-container-large uk-background-muted ">
-                  <Organization organization={organization} subcategory={subcategory}/>
+                  <div className="uk-section">
+                  <div className="uk-container uk-container-large uk-background-muted ">
+                      <Organization organization={organization} subcategory={subcategory}/>
+                  </div>
               </div>
-          </div>
              
             </Layout>
+            </div>
             );    
     default:
       return (
@@ -82,8 +86,8 @@ export async function getStaticProps({ params }) {
       },
     },
   });
-  const history = await fetchAPI("/history");
-  const organization = await fetchAPI("/organization");
+  const history = await fetchAPI("/history", { populate: "*"});
+  const organization = await fetchAPI("/organization", { populate: "*"});
   
   return {
     props: {

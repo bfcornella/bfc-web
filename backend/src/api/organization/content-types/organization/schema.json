@@ -15,6 +15,11 @@
     "content": {
       "type": "text",
       "maxLength": 1024
+    },
+    "positions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::position.position"
     }
   }
 }

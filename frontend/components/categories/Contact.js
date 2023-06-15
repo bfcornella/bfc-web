@@ -31,10 +31,6 @@ const Contact = ({ category }) => {
         <div class="uk-height-small uk-flex uk-flex-middle">
             <h1><span class="uk-text-muted"> {category.attributes.name}</span></h1>
         </div>
-       
-
-
-
 
         <div className="uk-container uk-width-1-1">
         <div uk-grid className="uk-grid-small uk-child-width-expand@s uk-text-small">

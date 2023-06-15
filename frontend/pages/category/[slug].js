@@ -3,6 +3,8 @@ import Layout from "../../components/layout";
 import Articles from "../../components/articles";
 import Sponsors from "../../components/categories/sponsors";
 import Contact from "../../components/categories/Contact";
+import Campus from "../../components/categories/campus";
+import { getStrapiMedia } from "../../lib/media";
 
 import { fetchAPI } from "../../lib/api";
 
@@ -11,6 +13,7 @@ const Category = ({ category, categories, history }) => {
   console.log(categories)
   console.log('category');
   console.log(category)
+
   const seo = {
     metaTitle: category.attributes.name,
     metaDescription: `All ${category.attributes.name} articles`,
@@ -19,27 +22,43 @@ const Category = ({ category, categories, history }) => {
   switch (category.attributes.slug) {
     case "sponsors":
      return (
-        <Layout categories={categories.data}>
-        <Seo seo={seo} />
-        <div className="uk-section">
-          <div className="uk-container uk-container-large">
-            <Sponsors articles={category.attributes.articles.data} />
-          </div>
-        </div>
-      </Layout>
+      <div style={{backgroundImage: `url(${getStrapiMedia(category.attributes.image)})`}}>
+          <Layout categories={categories.data}>
+              <Seo seo={seo} />
+              <div className="uk-section">
+                <div className="uk-container uk-container-large uk-background-muted ">
+                  <Sponsors  category={category} articles={category.attributes.articles.data} />
+                </div>
+              </div>
+            </Layout>
+      </div>
       );
     case "contact":
           return (
+            <div style={{backgroundImage: `url(${getStrapiMedia(category.attributes.image)})`}}>
               <Layout categories={categories.data}>
-              <Seo seo={seo} />
-              <div className="uk-section">
-              <div className="uk-container uk-container-large uk-background-muted ">
-                  <Contact category={category}/>
-              </div>
-          </div>
-             
+                  <Seo seo={seo} />
+                  <div className="uk-section">
+                    <div className="uk-container uk-container-large uk-background-muted ">
+                        <Contact category={category}/>
+                    </div>
+                  </div>
             </Layout>
-            );    
+             </div>
+            ); 
+      case "campus":
+        return (
+          <div style={{backgroundImage: `url(${getStrapiMedia(category.attributes.image)})`}}>
+            <Layout categories={categories.data}>
+                <Seo seo={seo} />
+                <div className="uk-section">
+                  <div className="uk-container uk-container-large uk-background-muted ">
+                      <Campus category={category}  articles={category.attributes.articles.data}/>
+                  </div>
+                </div>
+          </Layout>
+            </div>
+          );            
     default:
       return (
         <Layout categories={categories.data}>
@@ -92,7 +111,7 @@ export async function getStaticProps({ params }) {
       },
     },
   });
-  const history = await fetchAPI("/history");
+  const history = await fetchAPI("/history", { populate: "*"});
   
   return {
     props: {

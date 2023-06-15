@@ -22,10 +22,19 @@ const Nav = ({ categories }) => {
               {categories.map((category) => {
                 return (
                   <li key={category.id} >
-                    <Link className="uk-link-reset" href={category.attributes.slug == 'home'? `/`:`/category/${category.attributes.slug}`}>
+                  {category.attributes.subcategories.data.length==0 &&
+                     <Link className="uk-link-reset" href={category.attributes.slug == 'home'? `/`:`/category/${category.attributes.slug}`}>
                       {category.attributes.name}
                     </Link>
+                    }
+                  {category.attributes.subcategories.data.length>0 &&
+                    <Link className="uk-link-reset" href="#">
+                      {category.attributes.name}
+                    </Link>
+                  }
+                    
                     {category.attributes.subcategories.data.length>0 &&
+                    
                       <div className="uk-navbar-dropdown">
                           <ul className="uk-nav uk-navbar-dropdown-nav">
                             {category.attributes.subcategories.data.map((subcategory) => {
