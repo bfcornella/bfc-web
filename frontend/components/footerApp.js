@@ -55,7 +55,7 @@ const FooterApp = ({ global }) => {
           </div>
           <div className="uk-width-1-3@m uk-align-right uk-padding">
             <b>Telèfon</b><br/>
-            <span dangerouslySetInnerHTML={{__html:global.attributes.phone_1}}></span> / <span dangerouslySetInnerHTML={{__html:global.attributes.phone_2}}></span><br/><br/>
+            <span dangerouslySetInnerHTML={{__html:global.attributes.phone_1}}></span><br/><br/>
             <b>Email</b><br/>
             <a href={"mailto:"+global.attributes.mail}>{global.attributes.mail}</a><br/><br/>
             <Link href={global.attributes.instagram} target="_blank" alt="Instagram">

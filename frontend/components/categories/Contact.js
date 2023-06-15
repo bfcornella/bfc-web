@@ -53,7 +53,7 @@ const Contact = ({ category }) => {
                 </div>
                 <div class="uk-text-center" style={{padding: 15}}>
                   <span style={{color: '#daa99a'}} ><b>Telèfon</b><br/></span>
-                  <span dangerouslySetInnerHTML={{__html:data.attributes.phone_1}}></span> / <span dangerouslySetInnerHTML={{__html:data.attributes.phone_2}}></span>
+                  <span dangerouslySetInnerHTML={{__html:data.attributes.phone_1}}></span>
                 </div>
               </div>
               </div>
