@@ -16,7 +16,8 @@ const Nav = ({ categories }) => {
             </Link>
           </div>  
 
-          <div className="uk-navbar-center">     
+          <div className="uk-navbar-center"> 
+          <div uk-navbar="mode: click">    
             <ul className="uk-navbar-nav uk-visible@s">
               {categories.map((category) => {
                 return (
@@ -45,6 +46,7 @@ const Nav = ({ categories }) => {
               })}
 
             </ul>
+          </div> 
           </div> 
       </nav>
       
