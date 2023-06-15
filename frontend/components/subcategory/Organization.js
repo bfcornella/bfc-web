@@ -15,7 +15,7 @@ const Organization = ({ organization , subcategory}) => {
           return (
           
           
-            <div key={i} className="uk-width-1-3@m uk-align-left uk-margin-remove"> 
+            <div key={position.attributes.name} className="uk-width-1-3@m uk-align-left uk-margin-remove"> 
               <div class="uk-margin uk-card uk-card-default uk-card-body">
                 <div className="uk-align-center" style={{backgroundColor: '#daa99a', borderRadius: 50, padding: 15, width: 60}}>
                   <span uk-icon="icon: tag; ratio: 3"></span>
