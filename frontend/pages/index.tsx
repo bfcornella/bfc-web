@@ -40,7 +40,7 @@ export async function getStaticProps() {
   });
   const [articlesRes, categoriesRes, global] = await Promise.all([
     fetchAPI("/articles", { populate: ["cover", "category"] }),
-    fetchAPI("/categories?sort=id", { populate: {
+    fetchAPI("/categories", { sort: 'id', populate: {
       subcategories: {
         populate: "*",
       }
