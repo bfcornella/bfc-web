@@ -80,6 +80,7 @@ export async function getStaticProps({ params }) {
     populate: "*"
   });
   const allCategories = await fetchAPI("/categories", {
+    sort: 'id',
     populate: {
       subcategories: {
         populate: "*",

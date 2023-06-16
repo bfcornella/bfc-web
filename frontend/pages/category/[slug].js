@@ -77,7 +77,7 @@ const Category = ({ category, categories, history }) => {
 };
 
 export async function getStaticPaths() {
-  const categoriesRes = await fetchAPI("/categories", { fields: ["slug"] });
+  const categoriesRes = await fetchAPI("/categories", { sort: 'id', fields: ["slug"] });
   return {
     paths: categoriesRes.data.map((category) => ({
       params: {
@@ -91,6 +91,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   
   const matchingCategories = await fetchAPI("/categories", {
+    sort: 'id',
     filters: { slug: params.slug },
     populate: {
       articles: {
@@ -105,6 +106,7 @@ export async function getStaticProps({ params }) {
     },
   });
   const allCategories = await fetchAPI("/categories", {
+    sort: 'id',
     populate: {
       subcategories: {
         populate: "*",

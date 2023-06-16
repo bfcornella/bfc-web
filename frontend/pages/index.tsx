@@ -25,6 +25,7 @@ const Home = ({ articles, categories, homePage, homePageInfo }) => {
 export async function getStaticProps() {
   // Run API calls in parallel
   const categoryIni = await fetchAPI("/categories", {
+    sort: 'id',
     filters: { slug: 'home' },
     populate: {
       articles: {
