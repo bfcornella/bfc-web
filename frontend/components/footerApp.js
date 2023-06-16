@@ -9,49 +9,49 @@ const FooterApp = ({ global }) => {
       <div uk-grid className="uk-grid-small uk-child-width-expand@s uk-text-small">
           <div className="uk-width-1-3@m uk-align-left uk-margin-remove">
               <div className="uk-grid uk-margin-remove">
-              <div className="uk-width-3-3@m uk-align-center">
+              <div className="uk-width-3-3@m uk-align-center uk-padding-remove">
                   <Image src="/ajcornella_color_negatiu_cen.png"
                     width={180}
                     height={180}
                     alt="Ajuntament de Cornellà de Llobregat"
                   />
                 </div>
-                <div className="uk-width-1-3@m uk-align-center"> 
+                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
                   <Image src="/AF_Tram_NegColor.jpg"
                     width={100}
                     height={100}
                     alt="TRAM"
                   />
                 </div>
-                <div className="uk-width-1-3@m uk-align-center"> 
+                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
                     <Image src="/megagame.png"
                     width={150}
                     height={150}
                     alt="Megagame"
                   />
                 </div>
-                <div className="uk-width-1-3@m uk-align-center"> 
+                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
                   <Image src="/logo_clinica_dental_eucaliptus.png"
                     width={120}
                     height={120}
                     alt="Clínica dental Eucaliptus"
                   />
                 </div>
-                <div className="uk-width-1-3@m uk-align-center"> 
+                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
                   <Image src="/logo_esports_cornella_sense_fons.png"
                     width={150}
                     height={150}
                     alt="Esports Cornellà"
                   />
                 </div>
-                <div className="uk-width-1-3@m uk-align-center"> 
+                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
                   <Image src="/logo-montserrat.svg"
                     width={150}
                     height={150}
                     alt="Montserrat"
                   />
                 </div>
-                <div className="uk-width-1-3@m uk-align-center"> 
+                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
                     <Image src="/gpc.jpg"
                     width={150}
                     height={150}
