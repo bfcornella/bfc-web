@@ -26,7 +26,7 @@ const Contact = ({ category }) => {
   return (
     <>
       {data && (
-        <div  class="uk-padding uk-panel" >
+        <div  class="uk-padding uk-panel">
 
         <div class="uk-height-small uk-flex uk-flex-middle">
             <h1><span class="uk-text-muted"> {category.attributes.name}</span></h1>

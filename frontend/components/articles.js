@@ -6,10 +6,6 @@ import { getStrapiMedia } from "../lib/media";
 
 const Articles = ({ articles }) => {
 
-  const leftArticlesCount = Math.ceil(articles.length / 5);
-  const leftArticles = articles.slice(0, leftArticlesCount);
-  const rightArticles = articles.slice(leftArticlesCount, articles.length);
-
   return (
     <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slider="clsActivated: uk-transition-active; center: false">
 

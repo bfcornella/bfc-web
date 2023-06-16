@@ -33,6 +33,9 @@ export async function getStaticProps() {
       subcategories: {
         populate: "*",
       },
+      articleSalient: {
+        populate: "*",
+      },
     },
   });
   const [articlesRes, categoriesRes, global] = await Promise.all([

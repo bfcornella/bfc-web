@@ -6,68 +6,53 @@ import Layout from "../../components/layout";
 
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media";
+import NextImage from "next/image";
 
 const Article = ({ article, categories }) => {
-  const imageUrl = getStrapiMedia(article.attributes.cover);
-
   const seo = {
     metaTitle: article.attributes.title,
     metaDescription: article.attributes.description,
     shareImage: article.attributes.cover,
     article: true,
   };
-
+ /**<div style={{backgroundImage: `url(${getStrapiMedia(article.attributes.cover)})`}}> */
   return (
-    <Layout categories={categories.data}>
-      <Seo seo={seo} />
-      <div
-        id="banner"
-        className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding"
-        data-src={imageUrl}
-        data-srcset={imageUrl}
-        data-uk-img
-      >
-        <h1>{article.attributes.title}</h1>
-      </div>
-      <div className="uk-section">
-        <div className="uk-container uk-container-small">
-            <ReactMarkdown>
-                {article.attributes.content}
-            </ReactMarkdown>
-          <hr className="uk-divider-small" />
-          <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-            <div>
-              {article.attributes.author.data.attributes.picture && (
-                <img
-                  src={getStrapiMedia(
-                    article.attributes.author.data.attributes.picture
-                  )}
-                  alt={
-                    article.attributes.author.data.attributes.picture.data
-                      .attributes.alternativeText
-                  }
-                  style={{
-                    position: "static",
-                    borderRadius: "20%",
-                    height: 60,
-                  }}
-                />
-              )}
+    <div className="uk-background-muted">
+      <Layout categories={categories.data}>
+              <Seo seo={seo} />
+              <div className="uk-section">
+                <div className="uk-container uk-container-large">
+                    <div uk-grid className="uk-card uk-card-default uk-card-body uk-margin-top"  style={{opacity: '0.95'}}>
+                      <div className="uk-margin-remove"> 
+                             
+                              <div>
+                              <div class="uk-flex uk-flex-middle">
+                                  <h1><span class="uk-text-muted"> {article.attributes.title}</span></h1>
+                              </div>
+                              <div className="uk-align-center"> 
+                                    <NextImage
+                                    className="uk-align-center"
+                                        priority
+                                        width={600}
+                                        height={600}
+                                        src={getStrapiMedia(article.attributes.cover)}
+                                        alt={article.attributes.cover.data.attributes || ""} />
+
+                                    </div>
+                                      <div className="uk-panel"  style={{display: 'block'}}>
+                                        <span dangerouslySetInnerHTML={{__html:article.attributes.description}}></span>
+                                      </div>
+                              </div>
+                                   
+                             
+                      </div>
+                      
+                  </div>
+                </div>
+              </div>
+            </Layout>
             </div>
-            <div className="uk-width-expand">
-              <p className="uk-margin-remove-bottom">
-                By {article.attributes.author.data.attributes.name}
-              </p>
-              <p className="uk-text-meta uk-margin-remove-top">
-                <Moment format="MMM Do YYYY">
-                  {article.attributes.published_at}
-                </Moment>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
+
   );
 };
 
@@ -89,7 +74,7 @@ export async function getStaticProps({ params }) {
     filters: {
       slug: params.slug,
     },
-    populate: ["cover", "category", "author.picture"],
+    populate: ["cover", "category"],
   });
   const allCategories = await fetchAPI("/categories", {
     populate: {
