@@ -9,11 +9,18 @@ const FooterApp = ({ global }) => {
       <div uk-grid className="uk-grid-small uk-child-width-expand@s uk-text-small">
           <div className="uk-width-1-3@m uk-align-left uk-margin-remove">
               <div className="uk-grid uk-margin-remove">
-              <div className="uk-width-3-3@m uk-align-center uk-padding-remove">
+              <div className="uk-width-1-2@m uk-align-center uk-padding-remove">
                   <Image src="/ajcornella_color_negatiu_cen.png"
                     width={180}
                     height={180}
                     alt="Ajuntament de Cornellà de Llobregat"
+                  />
+                </div>
+                <div className="uk-width-1-2@m uk-align-center uk-padding-remove"> 
+                  <Image src="/logo_esports_cornella_sense_fons.png"
+                    width={150}
+                    height={150}
+                    alt="Esports Cornellà"
                   />
                 </div>
                 <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
@@ -38,24 +45,24 @@ const FooterApp = ({ global }) => {
                   />
                 </div>
                 <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
-                  <Image src="/logo_esports_cornella_sense_fons.png"
-                    width={150}
-                    height={150}
-                    alt="Esports Cornellà"
-                  />
-                </div>
-                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
                   <Image src="/logo-montserrat.svg"
                     width={150}
                     height={150}
                     alt="Montserrat"
                   />
                 </div>
-                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
+                <div className="uk-width-1-3@m uk-align-center"> 
                     <Image src="/gpc.jpg"
                     width={150}
                     height={150}
                     alt="GPC"
+                  />
+                </div>
+                <div className="uk-width-1-3@m uk-align-center uk-padding-remove"> 
+                  <Image src="/vitaldent.png"
+                    width={150}
+                    height={150}
+                    alt="Vitaldent"
                   />
                 </div>
               </div>
