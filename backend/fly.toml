@@ -1,9 +1,12 @@
-# fly.toml file generated for bfc-backend on 2023-04-05T01:35:07+02:00
+# fly.toml app configuration file generated for bfc-cms on 2023-10-07T16:28:17+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "bfc-backend"
-kill_signal = "SIGINT"
-kill_timeout = 5
+app = "bfc-cms"
 primary_region = "mad"
+kill_signal = "SIGINT"
+kill_timeout = "5s"
 
 [build]
   dockerfile = "Dockerfile.prod"
@@ -33,4 +36,3 @@ primary_region = "mad"
     interval = "1m0s"
     timeout = "10s"
     grace_period = "1m0s"
-    restart_limit = 10
