@@ -29,6 +29,7 @@ export async function getStaticProps() {
     filters: { slug: 'home' },
     populate: {
       articles: {
+        sort: { createdAt: 'desc' },
         populate: "*",
       },
       subcategories: {
