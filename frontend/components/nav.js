@@ -11,6 +11,11 @@ const Nav = ({ categories }) => {
             <Image src='/Logo_w.jpg' className='logo' width={100} height={100} alt='Home' />
           </Link>
         </div>
+        <div className='uk-navbar-socials'>
+          <Link href='https://x.com/bfemenicornella?lang=es' uk-icon='icon: twitter; ratio: 1.2'></Link>
+          <Link href='https://www.instagram.com/bfcornella/' uk-icon='icon: instagram; ratio: 1.2'></Link>
+          <Link href='https://www.youtube.com/@basquetfemenicornella' uk-icon='icon: youtube; ratio: 1.2'></Link>
+        </div>
 
         <div className='uk-navbar-center'>
           <div uk-navbar='mode: click'>
@@ -83,6 +88,12 @@ const Nav = ({ categories }) => {
             <Link href={`/`}>
               <Image src='/Logo_w.jpg' className='logo' width={64} height={64} alt='Home' />
             </Link>
+          </div>
+
+          <div className='uk-navbar-socials-mobile'>
+            <Link href='https://x.com/bfemenicornella?lang=es' uk-icon='icon: twitter; ratio: 1.1'></Link>
+            <Link href='https://www.instagram.com/bfcornella/' uk-icon='icon: instagram; ratio: 1.1'></Link>
+            <Link href='https://www.youtube.com/@basquetfemenicornella' uk-icon='icon: youtube; ratio: 1.1'></Link>
           </div>
 
           <div className='uk-position-top-right'>
