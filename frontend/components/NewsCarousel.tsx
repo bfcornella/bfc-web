@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
 import NewsCard from './NewsCard';
 
-const NewsCarousel = ({ news }) => {
+const NewsCarousel = ({ news }: { news: any }) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
