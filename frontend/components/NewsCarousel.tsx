@@ -29,7 +29,7 @@ const NewsCarousel = ({ news }: { news: any }) => {
           key='news_carousel'
         >
           <CarouselContent className='-ml-2 md:-ml-4' key='news_carousel_content'>
-            {news.map((article) => (
+            {news.map((article: any) => (
               <CarouselItem className='pl-2 md:pl-4 md:basis-1/3' key={article.attributes.id}>
                 <NewsCard
                   title={article.attributes.title}
@@ -44,7 +44,7 @@ const NewsCarousel = ({ news }: { news: any }) => {
           <CarouselPrevious className='hidden md:flex -left-12 lg:-left-16' />
           <CarouselNext className='hidden md:flex -right-12 lg:-right-16' />
           <div className='py-6 flex justify-center gap-2'>
-            {news.map((_, index) => (
+            {news.map((_: any, index: any) => (
               <button
                 key={index}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
