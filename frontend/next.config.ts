@@ -27,6 +27,14 @@ const nextConfig: NextConfig = {
         search: '',
         pathname: '',
       },
+
+      {
+        protocol: 'https',
+        hostname: '*.preview.app.github.dev',
+        port: '',
+        search: '',
+        pathname: '',
+      },
       {
         protocol: 'https',
         hostname: 'bfc-cms.fly.dev',
