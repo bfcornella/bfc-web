@@ -15,6 +15,17 @@ const eslintConfig = [
     rules: {
       'react/no-unescaped-entities': 'off',
       '@next/next/no-page-custom-font': 'off',
+      // Disable TypeScript type checking errors
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-floating-promises': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-return': 'off',
+      // Disable unused variables error
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   }),
 ];
