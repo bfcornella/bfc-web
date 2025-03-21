@@ -13,10 +13,10 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { Button } from '@/components/ui/button';
-import { Menu, Instagram, Youtube, Twitter, Volleyball } from 'lucide-react';
+import { Menu, Instagram, Youtube, Twitter } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Image from 'next/image';
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+// import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
   ({ className, title, children, ...props }, ref) => {
