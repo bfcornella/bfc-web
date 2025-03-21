@@ -1,3 +1,4 @@
+// @ts-expect-error No needed the implicit error here
 import qs from 'qs';
 
 /**
