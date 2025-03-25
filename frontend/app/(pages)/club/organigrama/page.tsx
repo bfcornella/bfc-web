@@ -40,7 +40,7 @@ const OrganigramaPage = async () => {
     <div className='container mx-auto py-12'>
       <h1 className='mb-8 text-2xl font-bold text-center'>ORGANIGRAMA</h1>
       <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3 px-5'>
-        {organizationMembers.map((member) => (
+        {organizationMembers.map((member: any) => (
           <Card key={member.id} className='overflow-hidden'>
             <CardHeader className='text-center'>
               <Avatar className='mx-auto h-20 w-20'>
