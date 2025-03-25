@@ -16,6 +16,8 @@ import { Button } from '@/components/ui/button';
 import { Menu, Instagram, Youtube, Twitter } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Image from 'next/image';
+import { Collapsible } from './ui/collapsible';
+import { MobileNav } from './MobileNav';
 // import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
@@ -64,21 +66,21 @@ export default function NavBar() {
       {/* Top Bar */}
       <div className='bg-primary text-primary-foreground'>
         <div className='max-w-7xl mx-auto px-4'>
-          <div className='flex items-center justify-between h-6'>
+          <div className='flex items-center justify-between h-8'>
             <div className='flex items-center space-x-4 text-sm'>
               <Link href='https://www.instagram.com/bfcornella/' target='_blank'>
-                <Instagram size={15} />
+                <Instagram size={17} />
               </Link>
               <Link href='https://x.com/bfemenicornella?lang=es' target='_blank'>
-                <Twitter size={15} />
+                <Twitter size={17} />
               </Link>
               <Link href='https://www.youtube.com/@basquetfemenicornella' target='_blank'>
-                <Youtube size={15} />
+                <Youtube size={17} />
               </Link>
             </div>
             <div className='flex items-center space-x-4'>
-              <Link href='/account' className='flex items-center space-x-1 text-xs'>
-                <img src='/assets/fcbq_blanc_logo.png' className='size-[15px]' />
+              <Link href='https://www.basquetcatala.cat/club/192' className='flex items-center space-x-1 text-xs'>
+                <img src='/assets/fcbq_blanc_logo.png' className='size-[17px]' />
                 <span>Federació Catalana Bàsquet</span>
               </Link>
             </div>
@@ -90,8 +92,9 @@ export default function NavBar() {
       <div className='border-b'>
         <div className='max-w-7xl mx-auto px-4'>
           <div className='flex items-center justify-between h-20 relative'>
+            <MobileNav />
             {/* Mobile Menu */}
-            <Sheet>
+            {/* <Sheet>
               <SheetTrigger asChild>
                 <Button variant='ghost' size='icon' className='md:hidden'>
                   <Menu className='h-6 w-6' />
@@ -102,11 +105,11 @@ export default function NavBar() {
                   <Link href='/' className='text-lg font-bold'>
                     Inici
                   </Link>
-                  <Link href='/news' className='text-lg'>
-                    Noticies
+                  <Link href='/club/historia' className='text-lg'>
+                    Historia
                   </Link>
-                  <Link href='/team' className='text-lg'>
-                    Equips
+                  <Link href='/club/organigrama' className='text-lg'>
+                    Organigrama
                   </Link>
                   <Link href='/tickets' className='text-lg'>
                     FCBQ
@@ -116,10 +119,10 @@ export default function NavBar() {
                   </Link>
                 </nav>
               </SheetContent>
-            </Sheet>
+            </Sheet> */}
 
             {/* Left Navigation */}
-            <NavigationMenu className='hidden md:flex'>
+            <NavigationMenu className={cn('hidden md:flex')}>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className='uppercase'>CLUB</NavigationMenuTrigger>
