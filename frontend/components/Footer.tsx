@@ -81,9 +81,7 @@ export function Footer() {
           </span>
           <span>|</span>
           <span>
-            <a href='https://res.cloudinary.com/dz7qbaw3p/image/upload/v1744737756/documents/protocol-proteccio.pdf'>
-              Protocol protecció
-            </a>
+            <a href='/contacte/proteccio'>Protocol protecció</a>
           </span>
         </div>
         <div className='mt-4 pt-8 border-t border-primary-foreground/10'>
