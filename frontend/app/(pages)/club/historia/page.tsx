@@ -16,7 +16,7 @@ const ClubPage = async () => {
         title={historyCategory.data[0].attributes.name}
         subtitle={"Coneix l'història del club"}
         imgUrl={historyCategory.data[0].attributes.image.data.attributes.url}
-        slug='historia'
+        slug={['club', 'historia']}
       />
       <section className='min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto space-y-12'>

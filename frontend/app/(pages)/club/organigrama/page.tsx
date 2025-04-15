@@ -3,34 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { fetchAPI } from '@/lib/api';
 import { UserRound } from 'lucide-react';
 
-// Sample member data - in a real app this would likely come from an API
-const members = [
-  {
-    id: 1,
-    name: 'Sarah Johnson',
-    role: 'CEO',
-    avatar: '/placeholder.svg',
-  },
-  {
-    id: 2,
-    name: 'Michael Chen',
-    role: 'CTO',
-    avatar: '/placeholder.svg',
-  },
-  {
-    id: 3,
-    name: 'Emma Williams',
-    role: 'Product Manager',
-    avatar: '/placeholder.svg',
-  },
-  {
-    id: 4,
-    name: 'David Miller',
-    role: 'Lead Developer',
-    avatar: '/placeholder.svg',
-  },
-];
-
 const OrganigramaPage = async () => {
   const organization = await fetchAPI('/organization', { populate: '*' });
   // console.log(organization);
