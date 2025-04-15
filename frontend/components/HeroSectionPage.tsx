@@ -13,7 +13,7 @@ const HeroSectionPage = ({
   imgUrl?: string;
   slug: string[];
 }) => {
-  const slugUrl = slug.map((s) => `/${s}`);
+  const slugUrl = '/' + slug.join('/');
 
   return (
     <>
