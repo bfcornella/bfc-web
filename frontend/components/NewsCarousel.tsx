@@ -35,7 +35,7 @@ const NewsCarousel = ({ news }: { news: any }) => {
                   title={article.attributes.title}
                   key={article.attributes.title}
                   imageUrl={article.attributes.cover.data.attributes.url}
-                  date={article.attributes.publishedAt}
+                  date={''}
                   action={() => {}}
                 />
               </CarouselItem>
