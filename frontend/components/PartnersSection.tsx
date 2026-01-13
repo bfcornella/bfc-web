@@ -2,9 +2,10 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 
 const partnersImageUrl = [
-  { id: 1, url: '/assets/tram_logo.png' },
-  { id: 2, url: '/assets/montserrat_logo.jpg' },
-  { id: 3, url: '/assets/megagame_logo.png' },
+  { id: 1, url: '/assets/ajuntament_logo.png' },
+  { id: 2, url: '/assets/tram_logo.png' },
+  { id: 3, url: '/assets/montserrat_logo.jpg' },
+  { id: 4, url: '/assets/megagame_logo.png' }
 ];
 
 const PartnersSection = () => {
@@ -20,7 +21,7 @@ const PartnersSection = () => {
       >
         <CarouselContent>
           {partnersImageUrl.map((partner) => (
-            <CarouselItem key={partner.id} className='md:basis-1/2 lg:basis-1/3'>
+            <CarouselItem key={partner.id} className='md:basis-1/2 lg:basis-1/4'>
               <div className='py-1 px-10'>
                 <div className='overflow-hidden'>
                   <img src={partner.url} alt={`Col·laborador`} className='h-32 w-full object-contain aspect-video' />
